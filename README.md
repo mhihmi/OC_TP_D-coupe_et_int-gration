@@ -2,7 +2,7 @@
 
 ### Lien vers le [cours](https://openclassrooms.com/fr/courses/3504431-decoupez-et-integrez-une-maquette)
 
-L'objectif de ce TP était de : 
+L'objectif : 
 
 * comprendre ce qu’est une maquette et qui la fait ;
 * ouvrir une maquette dans Photoshop ;

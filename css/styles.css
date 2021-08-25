@@ -1,0 +1,396 @@
+/*##################################*/
+/*############# RESET #############*/
+/*#################################*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*##################################*/
+/*############# GRILLE #############*/
+/*#################################*/
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1230px;
+  }
+}
+
+/*##################################*/
+/*############# MEDIA QUERIES #############*/
+/*#################################*/
+
+/* Screen larger than 768px */
+@media only screen and (min-width: 768px) {
+  .hero-img {
+    position: absolute;
+    top: 260px;
+    right: 1%;
+  }
+
+  .description2 {
+    margin-top: 152px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-img {
+    position: relative;
+    width: 75%;
+    margin-top: 220px;
+  }
+  .hero-txt {
+    margin-top: 140px !important;
+  }
+  .description {
+    margin-top: 90px;
+  }
+}
+
+/*##################################*/
+/*############# HEADER #############*/
+/*#################################*/
+
+.masthead {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: 82vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../images/masthead-bg.jpg) no-repeat center center/cover;
+}
+
+.hero-txt {
+  margin-top: 354px;
+}
+
+.hero-txt h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.hero-txt p {
+  color: white;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.iphone {
+  max-width: 100%;
+}
+
+/*##################################*/
+/*############# SECTION 1 DESCRIPTION #############*/
+/*#################################*/
+
+#description h1 {
+  font-size: 35px;
+  line-height: 24px;
+  font-weight: 100;
+  color: #222626;
+}
+
+#description p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #959595;
+}
+
+/*##################################*/
+/*############# SECTION 2 CONTENT #############*/
+/*#################################*/
+
+#featured_content {
+  overflow: hidden;
+}
+
+.box {
+  padding: 40px 38px;
+}
+
+.box h2 {
+  color: white;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.box p {
+  color: white;
+  margin-top: 23px;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.box a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.arrow {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.pink {
+  background-color: #f5989d;
+}
+
+.purplegrey {
+  background-color: #615f7d;
+}
+
+.photograph {
+  background: url(../images/box_bg2.png) no-repeat center center/cover;
+}
+
+.violet {
+  background-color: #bd8cbf;
+}
+
+.large {
+  background: url(../images/box_bg1.png) no-repeat center center/cover;
+}
+
+.green {
+  background-color: #82ca9c;
+}
+
+.laine {
+  background: url(../images/box_bg3.png) no-repeat center center/cover;
+}
+
+.fa-heart {
+  color: #c5c5c5;
+  float: right;
+}
+
+/*##################################*/
+/*############# SECTION 3 DETAILS #############*/
+/*#################################*/
+
+#details h1 {
+  font-size: 35px;
+  line-height: 24px;
+  color: #222626;
+  font-weight: 100;
+}
+
+#details h2 {
+  font-size: 13px;
+  line-height: 24px;
+  color: #67676d;
+  font-weight: 600;
+}
+
+#details p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #959595;
+}
+
+/*##################################*/
+/*############# SECTION 4 BIG PICTURE #############*/
+/*#################################*/
+
+#big_picture {
+  position: relative;
+  margin-top: 150px;
+  width: 100%;
+  min-width: 100%;
+  height: 870px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../images/car-bg.jpg) no-repeat center left/cover;
+}
+
+#big_picture h1 {
+  font-size: 60px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+#big_picture p {
+  font-size: 13px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+#big_picture a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.picture-text {
+  margin-top: 436px;
+}
+
+/*##################################*/
+/*############# SECTION 5 ABOUT #############*/
+/*#################################*/
+
+#about {
+  background-color: #82ca9c;
+  padding-top: 126px;
+  padding-bottom: 160px;
+}
+
+#about h1 {
+  font-size: 35px;
+  font-weight: 100;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+#about h2 {
+  font-size: 13px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#about p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 12px;
+}
+
+/*##################################*/
+/*############# SECTION 6 PRICING #############*/
+/*#################################*/
+
+#price_ranges {
+  background-color: #f6f7fa;
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
+
+.badge {
+  color: #fff;
+  font-size: 11px;
+  line-height: 22px;
+}
+
+.legacy {
+  background-color: #e1e1e1;
+  font-weight: 900;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.popular {
+  background-color: #bd8cbf;
+  font-weight: 600;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.card {
+  border-style: none;
+}
+
+.card-body1 {
+  padding: 0;
+  background-color: #f6f7fa;
+  padding: 46px 79px 50px 52px;
+}
+
+.card-body2 {
+  background-color: #ffffff;
+  padding: 46px 79px 50px 52px;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 40px;
+  color: #2e3b4e;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 25px;
+  color: #8297a7;
+}
+
+.card a {
+  font-size: 13px;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  background-color: #82ca9c;
+  border-radius: 3px;
+  padding: 16px 28px;
+}
+
+.fa-apple {
+  color: #c5c5c5;
+}
+
+.fa-windows {
+  color: #c5c5c5;
+}
+
+/*##################################*/
+/*############# FOOTER #############*/
+/*#################################*/
+
+footer {
+  background-color: #192431;
+  padding-top: 90px;
+  padding-bottom: 150px;
+}
+
+footer p,
+li {
+  font-size: 13px;
+  line-height: 24px;
+  color: #f6f7fa;
+  list-style: none;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer h2 {
+  font-size: 13px;
+  line-height: 24px;
+  color: #f6f7fa;
+  font-weight: 600;
+}
+
+.spam {
+  font-size: 12px;
+  line-height: 18px;
+  color: #57697f;
+}
+
+.btn-outline-light {
+  background-color: #82ca9c;
+  color: #fff;
+  border-color: #82ca9c;
+  padding: 18px 20px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+}

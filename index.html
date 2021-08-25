@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intégration d'une maquette Photoshop avec Bootstrap : Cours Openclassrooms">
+    <!-- Open Graph data, metaTags pour Facebook -->
+
+    <meta property="og:title" content="Take, une maquette photoshop intégrée avec Bootstrap" />
+    <meta property="og:type" content="website" />
+    <!-- À modifier une fois online -->
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Exemple d'intégration de maquette Photoshop avec Bootstrap" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Exemple d'intégration de maquette Photoshop avec Bootstrap">
+
+
+    <title>Take, une intégration de maquette</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3b7ce76a05.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- xs < 576 | 576 < sm < 768 | 768 < md < 992 | 992 < lg < 1200 | 1200 < xl < 1400 | 1400 < xxl -->
+
+<body>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 mt-5 ps-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92"
+                        height="41" viewBox="0 0 92 41">
+                        <image id="Shape_5" data-name="Shape 5" width="92" height="41"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAApCAYAAAC4AE4qAAAGmUlEQVRoge1bS2yVRRT+WpCFCE2RCFUUvZHiA1cXFyrv1g3uJCUuikZjrokBA2hy3Yi6KwkuTbwsxBfalDVsWjHVFjftiocEbVV8UIlpU5CFChwz9Rv8GP97O/+9LYV7+ZK/ncc5Z+Y/M/+Zc+bO1JkZysRiAC0AVgN4AMAyAHMBNAAYB3ABwLcATgL4EsBhACPlNlYtSKvw2QCeAfA8gHUA6lPwXgbwBYAPAHQCuHhT4SXoAGwB8BaA+6ag3e8p62MAZX9iNyJiFO5MxfsAViXUjXDWDgA4BeAsgEsAZgG4A0AzgJUANgBYlMDfB+AFmp7agFN4iedpMxu3q3HJzDrNrMXM6ifh90896TvJr3DyN0XKueGfUi+wPUE5h8xseYUvvZxyFJfZXs0qfFugkD/NLDfFjecoV7G1FhXexhnncdbMVk9TB1ZTvsdltl+1Cg8XzfsBDAKYz/zPANbQq5guZAD0AlhC+eNcaL+rxkVU/Wjn+u0TZbvAZeM0K9thmO1cYL6B/aib5nZnBKrw5wLX72UAR69Rp46yPQ/Xj2dnTi1XkOfTBaCb6cpA2zLHzE4H3shM2Dj1Xk6zXzNlbxvNrCtY1AuVyvUzfDOAu5l2IfiOMkaxiaahnf+bypCxg+2D/dlcwWzKVzgjxxLaH65A3r+g5g/LKHamHLUNZtYXeDbGfB/r08jrFBmHy5xJOZFR6UxXVOwauz9NQYAT6wLOMrM9Foc9pI+Ru14kXmL/0rxU1sxGyd9doYJag7drrVThs7nP4U2L2xvpj/w4dgN4NSj7ja7kkmDvxNO9FiG3l/1YzH65/u2P7FMBQE7yWS52ztV9XcobSdcqZWOkc27qS0KnGJR0nvyhbFBGju179EzojAuBx6eRI9USjPxxM1tnZnWsr2P+eEDXEil/v/C8l2IG5c1sSHi7WabBVFvwBSTxqDxFMVOj5d6cjZJ/QOg6HMERKdgZ+WL9wnPMzBqK0DWw3qM/Uv7OMniSFBHa3Dap65LybinPS3mHlA9IeabIAOna4QdZB23IfbL3yLQ/GfHZ3gvgcclvZXSYhHHWezi+pRFtaD9i6D1CEzAc1BUkr2ZAP30UKR+TdEHKvBxnRjqk/ECSwHqJLB1Gi77Kf3hQ0iO0uaXQS9vu8VBEG9qP+SXoQoSKU5ubkwEZTBiMJJ6MpHv4v0Db3cMtCE+fD+R76Dqx1y2a86TgAibHQqH4NeIXG1f/iyyiCyehD/sxrwRdiHCG66xsk3SPpFUhIY8qPMsfWrKc1bsDPpXjB7Mg5W4Q9roZfl4I50a81O+SborY83D1dxbhL4Zbpfx8BL2HKmgwqCtmHkJ4vkxQPiwycgl8St/KrzQnZudJl3YKPyeECyJe6htJN3E3sRTW0MXzOBHRxu2SPleCLoTO8GIzNYQOxHAJngMiMxMoPWnt2E0lL2B6gtcp/LQQLo94qR8AHJH8u9zhS0ID6z0c348RbWg/Yug9Qr/Xo9SMVmWpwpPWg72S122DUL5XeE9QPqHwY5J/tETHFLsk/TCDpbViXup4jKKf9R67ikq8Gisll2bHMpxpoOLGAqVki6RDM+ThedXzyIjSGxMWSu2LD8AanZ/YLn7iGQleJnvesf9jhP7qSEKdo4+RW89+eLSn8MFHhW+UPvIo/eaOoD+FIOjzvnYX6XWnUH3tgYBniHLaEmTlpY0Jvx9VtpcSKrWbeyvgdmt3Qn0YTfrAR2l1WzYrkelAEFzlgkH3A3IlmPKEulv4WcrIroXRYNJuYX+KcN4/le4WZrnJ1FikPsP6TEJZMZ5y+5AN6/xvmu5U1Ue0Nxdpd0+lsJ0Od9H2LmKgM0D/Ow2a6cXMIo/r1ycpZVzX8AqfA2BIfsg9BOCpGej4Qf544fATf9T+6/pXYzz8tqx7qTeEayNn17XEFlE26NFUlbIRnC10rtxXAJ5g3oXXj12jH5IfAfC1RLp9DJiq7qBneC5lGW2vnktZlTL4SIulVLA3Z+fot1b9uRTwFOuLMrOWMHhZMU3tr6B8r2xj+1Wp7AkUcWteCVy88ykDkJinnXIV26a4jevuKdWh7Qm+9UEza67wJZopJ/TZa/r0rH82lTgfviHl+XBHX/Pnw2NvQOwT70WRdAPiIu8C6Q2I9cEWrUc/7wvVzA2INHd83NnDN/mbZqVwW7xvA/jw5h2f0rhFbrGtLeMWWy+/FneL7e8pfI8bBpXc02ziPc1Vck/zNvrwzpf+Q+5pOj/7cwBnak/FAgD/AMa5XNE/7Cb6AAAAAElFTkSuQmCC" />
+                    </svg>
+                </div>
+                <div class="col-md-10"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-5 hero-txt">
+                    <h1>Picture Perfect</h1>
+                    <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+                <!-- Hide on screen smaller than md -->
+                <div class="col-xs-12 col-md-6 offset-lg-1 col-lg-6 hero-img">
+                    <img src="images/iPhone.png" alt="iPhone" class="iphone">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Section 1 Description-->
+    <section id="description">
+        <div class="container mt-5 pt-3">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 description">
+                    <h1 class="pt-2">Start something new</h1>
+                    <p class="pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat.</p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium
+                        doloremque laudantium, totam rem aperiam.</p>
+                    <p>
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-6 description2">
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                        voluptatem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 2 Featured Content -->
+    <section id="featured_content">
+        <div class="container">
+            <div class="row ps-3 pt-5 d-flex flex-md-nowrap">
+                <div class="col-xs-12 col-md-6 col-lg-4 box pink">
+                    <h2>Design quality</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        adipisicing.</p>
+                    <a href="#">Find Out more <span class="arrow ps-3">&#8594;</span></a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4 box purplegrey">
+                    <h2>Built to last</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        adipisicing.</p>
+                    <a href="#">Find Out more <span class="arrow ps-3">&#8594;</span></a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4 box photograph">
+                    <h2>Our clients</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#">Get insights <span class="arrow ps-3">&#8594;</span></a><br>
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4 box violet">
+                    <h2>How to shoo great</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        adipisicing.</p>
+                    <a href="#">Find Out more <span class="arrow ps-3">&#8594;</span></a>
+                </div>
+            </div>
+
+            <div class="row ps-3 d-flex flex-md-nowrap">
+                <div class="col-xs-12 col-md-12 col-lg-8 box large">
+                    <h2>Sign up & see why</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        adipisicing.</p>
+                    <a href="#" class="mt-5">Get Started Now<span class="arrow ps-3">&#8594;</span></a><br>
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4 box green">
+                    <h2>Perfect pictures</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        adipisicing.</p>
+                    <a href="#">Find Out more <span class="arrow ps-3">&#8594;</span></a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4 box laine">
+                    <h2>STart somthing new</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        adipisicing.</p>
+                    <a href="#">Get Started Now<span class="arrow ps-3">&#8594;</span></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Section 3 Details -->
+    <section id="details">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12 mt-5">
+                    <h1>A look at the details</h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-xs-12 col-md-6 col-lg-3 mt-3">
+                    <h2>Web based</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3 mt-3">
+                    <h2>Performance</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3 mt-3">
+                    <h2>Clultral</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3 mt-3">
+                    <h2>Sustainability</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 4 Big picture -->
+    <section id="big_picture">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-9 col-lg-6 picture-text">
+                    <h1>More power <br> behind every pixel.</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a href="#">See the options<span class="arrow ps-3">&#8594;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 5 A propos -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Reasons to get onboard</h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-xs-12 col-md-4 mt-3">
+                    <h2>Web based</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-xs-12 col-md-4 mt-3">
+                    <h2>Team login</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-xs-12 col-md-4 mt-3">
+                    <h2>Great Support</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 6 Gammes de prix  -->
+    <section id="price_ranges">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-body1">
+                            <span class="badge legacy mb-3">LEGACY</span>
+                            <h1 class="card-title">Go it solo</h1>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation</p>
+                            <a href="" class="btn btn-outline-light mb-3">Buy Now $9</a><br>
+                            <i class="fab fa-apple fa-2x me-3"></i>
+                            <i class="fab fa-windows fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-body2 shadow-sm">
+                            <span class="badge popular mb-3">MOST POPULAR</span>
+                            <h1 class="card-title">Team Plan</h1>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris</p>
+                            <a href="" class="btn btn-outline-light mb-3">Buy Now $18</a><br>
+                            <i class="fab fa-apple fa-2x me-3"></i>
+                            <i class="fab fa-windows fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h2>Get in touch</h2>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <h2>Stay in touch</h2>
+                    <div class="input-group mb-3 mt-4">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-light" type="button">
+                                <img src="/images/check.png" alt="Check Icon">
+                            </button>
+                        </div>
+                    </div>
+                    <p class="spam">We don’t send spam. Actually, who are we kiding, we’ll spam <br>
+                        the shit out of you’r inbox</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-lg-2 text-sm-center text-md-start">
+                    <h2>Resources</h2>
+                    <ul class="mt-3">
+                        <li>Tour</li>
+                        <li>Customers</li>
+                        <li>Pricing and Plans</li>
+                        <li>New Features</li>
+                        <li>Education</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-lg-2 text-sm-center text-md-start">
+                    <h2>Features</h2>
+                    <ul class="mt-3">
+                        <li>Tour</li>
+                        <li>Customers</li>
+                        <li>Pricing and Plans</li>
+                        <li>New Features</li>
+                        <li>Education</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-lg-2 text-sm-center text-md-start">
+                    <h2>How To's</h2>
+                    <ul class="mt-3">
+                        <li>Tour</li>
+                        <li>Customers</li>
+                        <li>Pricing and Plans</li>
+                        <li>New Features</li>
+                        <li>Education</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
